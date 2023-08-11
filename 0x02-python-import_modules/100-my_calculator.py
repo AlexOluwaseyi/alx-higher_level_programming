@@ -18,7 +18,7 @@ if __name__ == "__main__":
         except ValueError:
             print("Both {} and {} should be integers".format(argv[1], argv[3]))
             sys.exit(1)
-        operator = argv[2]
+        operator = str(argv[2])
 
         if operator not in operators:
             print("Unknown operator. Available operators: +, -, * and /")
@@ -31,8 +31,8 @@ if __name__ == "__main__":
             elif index == 1:
                 result = sub(a, b)
             elif index == 2:
-                result = mul(a, b)
-            else:
                 result = div(a, b)
+            elif index == 3:
+                result = mul(a, b)
             print("{:d} {:s} {:d} = {:d}".format(a, operator, b, result))
             sys.exit(0)
