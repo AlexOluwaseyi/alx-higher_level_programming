@@ -7,4 +7,5 @@ b = 2
 
 add(a, b)
 
-print(str(a) + " + " + str(b) + " = " + str(add(a, b)))
+print("{} + {} = {}".format(a, b, add(a, b)))
+#str(a) + " + " + str(b) + " = " + str(add(a, b)))
