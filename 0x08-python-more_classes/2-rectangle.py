@@ -1,4 +1,4 @@
-#!/usr/bin/python8
+#!/usr/bin/python3
 """2-rectangle, built for Holberton Python project 0x08 task 1.
 """
 
