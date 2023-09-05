@@ -1,15 +1,18 @@
 #!/usr/bin/python8
-"""1-rectangle, built for Holberton Python project 0x08 task 1.
+"""3-rectangle, built for Holberton Python project 0x08 task 1.
 """
 
 
 class Rectangle:
-    """At this stage the class only creates private instance attributes by
-    taking in two arguments.
+    """Takes in args for width and height of a rectangle, and contains methods
+    for calculation of the area or perimeter.
+
+    __str__ fuctionality defined below.
 
     Args:
         width (int): horizontal dimension of rectangle, defaults to 0
         height (int): vertical dimension of rectangle, defaults to 0
+
     """
 
     def __init__(self, width=0, height=0):
