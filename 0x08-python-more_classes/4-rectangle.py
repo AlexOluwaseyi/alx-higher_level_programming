@@ -121,11 +121,12 @@ class Rectangle:
         for _ in range(self.__height):
             rectangle_str += "#" * self.__width + "\n"
         return rectangle_str[:-1]
+
     def __repr__(self):
         """Returns a string representation that can recreate the instance.
 
         Returns:
-            A string representation that can recreate the instance using eval().
+        A string representation that can recreate the instance using eval().
 
         """
         return f'Rectangle({self.__width}, {self.__height})'
