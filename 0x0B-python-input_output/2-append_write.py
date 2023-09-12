@@ -4,6 +4,7 @@
 Write and append text to a file
 """
 
+
 def append_write(filename="", text=""):
     """
     Append text to a file
@@ -11,7 +12,7 @@ def append_write(filename="", text=""):
     Args:
         filename (str): file to append text to
         text (str): string of text to be added at the end of the file
-    
+
     Return:
         number of characters appended.
     """
