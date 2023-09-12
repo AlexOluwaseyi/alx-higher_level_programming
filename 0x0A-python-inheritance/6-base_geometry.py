@@ -2,6 +2,7 @@
 
 """ A geometry class and module below"""
 
+
 class BaseGeometry:
     """
     A base class for geometry-related operations.
