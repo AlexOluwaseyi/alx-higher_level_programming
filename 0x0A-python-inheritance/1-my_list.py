@@ -4,6 +4,7 @@
 A script to illustrate a class inheriting 'list'
 """
 
+
 class MyList(list):
     """
     A custom list class that inherits the built-in list class.
