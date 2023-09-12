@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+""" A geometry class and module below"""
 
 class BaseGeometry:
     """
