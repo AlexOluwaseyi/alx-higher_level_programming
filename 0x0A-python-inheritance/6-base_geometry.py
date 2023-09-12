@@ -5,11 +5,11 @@ class BaseGeometry:
     """
     A base class for geometry-related operations.
 
-    This class provides a foundation for defining geometric shapes and performing
+    This class is for defining geometric shapes and performing
     calculations related to them.
 
     Methods:
-        area(): Raises an Exception with the message 'area() is not implemented'.
+        area(): Raises an Exception with message 'area() is not implemented'.
             This method is meant to be overridden by derived classes to
             provide specific implementation for calculating area.
     """
