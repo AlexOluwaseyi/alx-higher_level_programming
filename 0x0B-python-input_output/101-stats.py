@@ -28,7 +28,7 @@ try:
                 total_size += int(line[-1])
                 if tmp == iteration:
                     iteration += 1
-            except:
+            except ValueError:
                 if tmp == iteration:
                     continue
 
