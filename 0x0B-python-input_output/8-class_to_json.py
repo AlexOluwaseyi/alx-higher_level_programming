@@ -5,6 +5,7 @@ function that returns the dictionary description
 with simple data structure
 """
 
+
 def class_to_json(obj):
     """
     Convert an object with serializable attributes to a dictionary.
@@ -19,4 +20,3 @@ def class_to_json(obj):
         raise ValueError("Input object must be an instance of a Class.")
 
     return obj.__dict__
-
