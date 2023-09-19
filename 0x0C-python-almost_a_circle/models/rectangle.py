@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
-from models.base import Base
 """
 Rectangle Models
 Almost a circle project on ALX
 """
+from base import Base
 
 
 class Rectangle(Base):
