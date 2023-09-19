@@ -3,7 +3,7 @@
 Rectangle Models
 Almost a circle project on ALX
 """
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):

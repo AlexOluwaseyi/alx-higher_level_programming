@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Base class
-Almost a circle project on ALX
-"""
+"""Base class - Almost a circle project on ALX"""
 
 import json
 import csv

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 """
-Rectangle Models
+Square Models
 Almost a circle project on ALX
 """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
