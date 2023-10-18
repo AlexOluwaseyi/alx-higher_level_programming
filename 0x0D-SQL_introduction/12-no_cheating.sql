@@ -1,2 +1,2 @@
--- Update score based on na,e
-UPDATE second_table SET score=10 where name='Bob';
+-- Update score based on name
+UPDATE second_table SET score = 10 where name = 'Bob';
