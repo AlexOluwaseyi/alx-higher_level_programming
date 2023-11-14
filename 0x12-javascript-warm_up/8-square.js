@@ -6,7 +6,7 @@ let i = 0;
 
 if (!isNaN(side) && side > 0) {
   while (i < side) {
-    console.log('x'.repeat(side));
+    console.log('X'.repeat(side));
     i++;
   }
 } else if (isNaN(side)) {
