@@ -27,8 +27,8 @@ if __name__ == "__main__":
 
     # Execute the query to list all states with same
     cursor.execute(
-            "SELECT * FROM states WHERE name\
-            LIKE %s ORDER BY states.id ASC;".format(stateName)
+            "SELECT * FROM states WHERE name = %s\
+            ORDER BY states.id ASC;".format(stateName)
             )
 
     # Fetch all the results

@@ -33,6 +33,8 @@ if __name__ == "__main__":
     for row in results:
         print(row)
 
+    '''
     # Close the cursor and connection
     cursor.close()
     db.close()
+    '''
