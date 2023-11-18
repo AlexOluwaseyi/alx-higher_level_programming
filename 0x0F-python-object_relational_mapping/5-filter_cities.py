@@ -25,10 +25,10 @@ if __name__ == "__main__":
     # Execute the query to list all states
     cursor.execute("SELECT cities.name FROM cities JOIN states \
             ON states.id = cities.state_id WHERE states.name = '{}' \
-            ORDER BY cities.id ASC".format(argv[4]))
+            ORDER BY cities.id ASC".format(sys.argv[4]))
 
     # Fetch all the results
-    results = cursor.fetchall()]
+    results = cursor.fetchall()
 
     # Display the results
     print(", ".join(row[0] for row in results))
