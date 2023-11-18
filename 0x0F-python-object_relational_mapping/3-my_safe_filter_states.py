@@ -22,7 +22,7 @@ if __name__ == "__main__":
             )
 
     # The name of the state to be queried
-    stateName = sys.argv[4]
+    stateName = db.escape_string(sys.argv[4]).decode()
 
     # Get a cursor object
     cursor = db.cursor()
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Execute the query to list all states with same
     cursor.execute(
             "SELECT * FROM states WHERE name\
-            LIKE '%{stateName}%' ORDER BY states.id ASC;"
+            LIKE '{}' ORDER BY states.id ASC;".format(stateName)
             )
 
     # Fetch all the results
