@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 
-import MySQLdb
-from os import sys
+'''
+a script that lists all states from the database hbtn_0e_0_usa
+takes 3 arguments: mysql username, mysql password and database name
+'''
 
 if __name__ == "__main__":
+    import MySQLdb
+    from os import sys
+
     # Connect to the MySQL server
     db = MySQLdb.connect(
             host="localhost", port=3306,
