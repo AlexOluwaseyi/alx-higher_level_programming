@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Execute the query to list all states with same
     cursor.execute(
-            "SELECT * FROM states WHERE name\
+            "SELECT * FROM states WHERE name \
             LIKE '{}' ORDER BY states.id ASC;".format(stateName)
             )
 

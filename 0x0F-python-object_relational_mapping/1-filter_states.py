@@ -22,8 +22,8 @@ if __name__ == "__main__":
 
     # Execute the query to list all states
     cursor.execute(
-            """SELECT * FROM states WHERE UPPER(name)\
-            LIKE 'N%' ORDER BY id ASC"""
+            "SELECT * FROM states WHERE name \
+            LIKE BINARY 'N%' ORDER BY states.id ASC"
             )
 
     # Fetch all the results
@@ -32,7 +32,3 @@ if __name__ == "__main__":
     # Display the results
     for row in results:
         print(row)
-
-    # Close the cursor and connection
-    cursor.close()
-    db.close()

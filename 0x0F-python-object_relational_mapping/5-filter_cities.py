@@ -23,22 +23,15 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the query to list all states
-    query = """
-    SELECT cities.name AS city_name
-    FROM cities
-    JOIN states
-    ON cities.state_id = states.id
-    WHERE states.name = %s
-    ORDER BY cities.id ASC
-    """
-
-    cursor.execute(query, (stateName,))
+    cursor.execute("SELECT cities.name FROM cities JOIN states \
+            ON states.id = cities.state_id WHERE states.name = '{}' \
+            ORDER BY cities.id ASC".format(argv[4]))
 
     # Fetch all the results
-    results = [row[0] for row in cursor.fetchall()]
+    results = cursor.fetchall()]
 
     # Display the results
-    print(", ".join(results))
+    print(", ".join(row[0] for row in results))
 
     # Close the cursor and connection
     cursor.close()
