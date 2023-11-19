@@ -26,7 +26,8 @@ def search_states(username, password, database, search_name):
     cursor = db.cursor()
 
     # Execute the SQL query to retrieve states matching the input name
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
+    query = """SELECT * FROM states WHERE name LIKE BINARY '{}'
+            ORDER BY states.id ASC"""
     cursor.execute(query, (state_name,))
 
     # Fetch all the rows
