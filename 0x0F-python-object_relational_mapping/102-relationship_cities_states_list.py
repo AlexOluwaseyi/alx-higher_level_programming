@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from relationship_state import Base, State, City
 import sys
 
+
 if __name__ == "__main__":
     # Create a SQLAlchemy engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
