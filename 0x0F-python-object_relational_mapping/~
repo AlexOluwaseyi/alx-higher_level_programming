@@ -1,0 +1,33 @@
+" ============================================================================
+" Netrw Directory Listing                                        (netrw v165)
+"   /root/alx-higher_level_programming/0x0F-python-object_relational_mapping
+"   Sorted by      name
+"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
+"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
+" ==============================================================================
+../
+./
+__pycache__/
+0-select_states.py*
+1-filter_states.py*
+10-model_state_my_get.py*
+11-model_state_insert.py*
+12-model_state_update_id_2.py*
+13-model_state_delete_a.py*
+14-model_city_fetch_by_state.py*
+2-my_filter_states.py*
+3-my_safe_filter_states.py*
+4-cities_by_state.py*
+5-filter_cities.py*
+6-model_state.py*
+7-model_state_fetch_all.py*
+8-model_state_fetch_first.py*
+9-model_state_filter_a.py*
+model_city.py*
+model_state.py*
+0-select_states.sql
+14-model_city_fetch_by_state.sql
+4-cities_by_state.sql
+6-model_state.sql
+7-model_state_fetch_all.sql
+README.md
