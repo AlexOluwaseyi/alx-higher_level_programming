@@ -1,39 +1,52 @@
 #!/usr/bin/python3
 
-'''
+"""
 a script that takes in an argument and displays all values in the
 states table of hbtn_0e_0_usa where name matches the argument.
 
 takes 4 arguments: mysql username, mysql password,
 database name and state name
-'''
+"""
 
-if __name__ == "__main__":
-    import MySQLdb
-    from os import sys
+import MySQLdb
+import sys
 
+
+def search_states(username, password, database, search_name):
     # Connect to the MySQL server
     db = MySQLdb.connect(
-            host="localhost", port=3306,
-            user=sys.argv[1], passwd=sys.argv[2],
-            db=sys.argv[3]
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database
             )
 
-    # The name of the state to be queried
-    stateName = sys.argv[4]
-
-    # Get a cursor object
+    # Create a cursor object to interact with the database
     cursor = db.cursor()
 
-    # Execute the query to list all states with same
-    cursor.execute(
-            "SELECT * FROM states WHERE name='{}' \
-            ORDER BY states.id ASC;".format(stateName)
-            )
+    # Execute the SQL query to retrieve states matching the input name
+    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
+    cursor.execute(query, (state_name,))
 
-    # Fetch all the results
-    results = cursor.fetchall()
+    # Fetch all the rows
+    states = cursor.fetchall()
 
     # Display the results
-    for row in results:
-        print(row)
+    for state in states:
+        print(state)
+
+    # Close the cursor and connection
+    cursor.close()
+    db.close()
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 5:
+        print("Usage: {} <username> <password> <database> \
+                <state_name>".format(sys.argv[0]))
+        sys.exit(1)
+
+    username, password, database, state_name \
+        = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    search_states(username, password, database, state_name)
