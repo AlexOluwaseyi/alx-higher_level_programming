@@ -8,8 +8,8 @@
 ### Tasks
 - [x] 0. cURL body size
 - [x] 1. cURL to the end
-- [ ] 2. cURL Method
-- [ ] 3. cURL only methods
-- [ ] 4. cURL headers
-- [ ] 5. cURL POST parameters
-- [ ]6. Find a peak
+- [x] 2. cURL Method
+- [x] 3. cURL only methods
+- [x] 4. cURL headers
+- [x] 5. cURL POST parameters
+- [ ] 6. Find a peak
