@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
 Script that takes in a URL, sends a request, and displays the body of the
-response. If the HTTP status code is greater than or equal to 400, print: 
+response. If the HTTP status code is greater than or equal to 400, print:
 Error code: followed by the value of the HTTP status code.
 """
 
 import requests
 import sys
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

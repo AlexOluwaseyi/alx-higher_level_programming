@@ -1,27 +1,24 @@
 #!/usr/bin/python3
 """
-Script that takes in a letter, sends a POST request, and displays the response.
+Script that uses GitHub API to display user id using Basic Authentication.
 """
 
 import requests
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        q = ""
-    else:
-        q = sys.argv[1]
+    if len(sys.argv) != 3:
+        print("Usage: {} <username> <token>".format(sys.argv[0]))
+        sys.exit(1)
 
-    payload = {'q': q}
-    url = 'http://0.0.0.0:5000/search_user'
+    username = sys.argv[1]
+    token = sys.argv[2]
 
-    response = requests.post(url, data=payload)
+    url = 'https://api.github.com/user'
+    response = requests.get(url, auth=(username, token))
 
     try:
         data = response.json()
-        if data:
-            print("[{}] {}".format(data.get('id'), data.get('name')))
-        else:
-            print("No result")
+        print(data.get('id'))
     except ValueError:
         print("Not a valid JSON")
