@@ -22,8 +22,8 @@ $ export NODE_PATH=/usr/lib/node_modules
 Notes: Request module has been deprecated since February 2020 - the team is considering alternative to replace this module - however, it’s a really simple and powerful module for practicing web-scraping in JavaScript (and still used a lot in the industry).
 
 ### Tasks
-- [ ] 0. Readme
-- [ ] 1. Write me
+- [x] 0. Readme
+- [x] 1. Write me
 - [ ] 2. Status code
 - [ ] 3. Star wars movie title
 - [ ] 4. Star wars Wedge Antilles
