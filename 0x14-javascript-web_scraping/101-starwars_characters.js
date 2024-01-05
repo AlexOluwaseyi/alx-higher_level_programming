@@ -40,4 +40,3 @@ request(baseUrl, async (error, response, body) => {
     console.log(item);
   });
 });
-
