@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const baseUrl = 'https://jsonplaceholder.typicode.com/todos';
+const baseUrl = process.argv[2];
 
 request(baseUrl, (error, response, body) => {
   if (error) {
